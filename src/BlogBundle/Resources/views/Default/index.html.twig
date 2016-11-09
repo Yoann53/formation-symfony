@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<header>
+		{% block header %}
+			{% include 'BlogBundle:Default:header.html.twig' %}
+		{% endblock %}
+	</header>
+
+	{% block content %}{% endblock %}
+
+	<footer>
+		{% block footer %}
+			{% include 'BlogBundle:Default:footer.html.twig' %}
+		{% endblock %}
+	</footer>
+{% endblock %}

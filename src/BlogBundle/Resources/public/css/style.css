@@ -1,0 +1,16 @@
+header ul {
+	list-style-type: none;
+}
+
+header ul li {
+	display: inline;
+}
+
+.active {
+	color: red;
+}
+
+.sm-image {
+	height: 200px;
+	width: 200px;
+}

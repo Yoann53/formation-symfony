@@ -1,0 +1,19 @@
+<ul>
+	{% if menu is defined %}
+		{% for onglet in menu %}
+			<li
+				{% if loop.index == menuActif %} 
+					class='active'>
+					{{ onglet.0 }} 
+				{% else %}
+					>
+					<a href="{{ path(onglet.1) }}">
+						{{ onglet.0 }}
+					</a>
+				{% endif %}
+			</li>
+		{% endfor %}
+	{% else %}
+		<p>Erreur menu indéfini !</p>
+	{% endif %}
+</ul>

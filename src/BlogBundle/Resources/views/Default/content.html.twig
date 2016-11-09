@@ -1,0 +1,46 @@
+{% extends 'BlogBundle:Default:index.html.twig' %}
+
+{% block header %}
+	{{ parent() }}
+	<p>Mon nouveau header</p>
+{% endblock %}
+
+{% block content %}
+	{#
+	<p>{{ post }}</p>
+	<p>{{ author }}</p>
+	#}
+	{# Conditions #}
+	{% if author == 'Yoann' %}
+		<p>{{ post }}</p>
+	{% elseif author == 'Jessica' %}
+		<p>l'auteur est Jessica</p>
+	{% else %}
+		<p>l'auteur n'est pas Yoann mais {{ author }}</p>
+	{% endif %}
+
+	{# For avec intervalle #}
+	{% for i in 34..40 %}
+		<p>{{ i }}</p>
+	{% endfor %}
+
+	{# For avec un tableau de valeur en affichant la clé #}
+	{% for comment in comments %}
+		<p>{{ comment.0 }}</p>
+		<p>{{ comment.1.author }} {{ comment.1.age }}</p>
+		
+		{% if loop.index == 2 %}
+			<p>je suis rendu à la deuxième itération</p>
+		{% endif %}
+
+		{% if loop.last %}
+			<p>Ceci est la dernière itération</p>
+		{% endif %}
+	{% endfor %}
+
+	{# utilisation des filters twig #}
+	<p>{{ date|date('Y/m/d H:i:s') }}</p>
+	<p>Nombre de commentaires : {{ comments|length }}</p>
+
+
+{% endblock %}

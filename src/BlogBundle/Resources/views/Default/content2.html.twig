@@ -1,0 +1,20 @@
+{% extends 'BlogBundle:Default:index.html.twig' %}
+
+{% block content %}
+	{% if id is not empty %}
+		{% if id == 1 %}
+			<img class="sm-image" src="{{ asset('/bundles/blog/images/chaton.jpg') }}"/>
+		{% else %}
+			<img class="sm-image" src="{{ asset('/bundles/blog/images/chaton1.jpg') }}"/>
+		{% endif %}
+	{% else %}
+		<img class="sm-image" src="{{ asset('/bundles/blog/images/defaut.png') }}"/>
+	{% endif %}
+
+	<a href="{{ path('page_image', {'id': 1}) }}">
+		<input type="button" value="chaton"/>
+	</a>
+	<a href="{{ path('page_image', {'id': 2}) }}">
+		<input type="button" value="chaton1"/>
+	</a>
+{% endblock %}
