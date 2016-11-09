@@ -27,21 +27,21 @@ class DefaultController extends Controller
 	        		'first' => array(
 	        			'1er commentaire', 
 	        			array(
-	        				'autor' => 'Yoann', 
+	        				'author' => 'Yoann', 
 	        				'age' => 29
 	        			)
 	        		),
 	        		'second' => array(
 	        			'2eme commentaire', 
 	        			array(
-	        				'autor' => 'Mouhammad',
+	        				'author' => 'Mouhammad',
 	        				'age' => 18
 	        			)
 	        		),
 	        		'third' => array(
 	        			'3eme commentaire', 
 	        			array(
-	        				'autor' => 'Cindy',
+	        				'author' => 'Cindy',
 	        				 'age' => 29
 	        			)
 	        		)
