@@ -46,8 +46,8 @@ class Comment
     private $updated;
 
     /**
-     * @ManyToOne(targetEntity="Post")
-     * @JoinColumn(name="post_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Post", inversedBy="comments")
+     * @ORM\JoinColumn(name="id_post", referencedColumnName="id")
      */
     private $post;
 

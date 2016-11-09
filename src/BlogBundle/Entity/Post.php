@@ -53,6 +53,11 @@ class Post
     private $updated;
 
     /**
+     * @ORM\OneToMany(targetEntity="Comment", mappedBy="post")
+     */
+    private $comments;
+
+    /**
      * Get id
      *
      * @return int

@@ -1,0 +1,13 @@
+{% extends "BlogBundle:Default:index.html.twig" %}
+
+{% block title %}Liste des posts{% endblock %}
+
+{% block content %}
+
+	<ul>
+		{% for p in posts %}
+			<li>{{ p.title }}</li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}
