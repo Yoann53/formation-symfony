@@ -95,5 +95,56 @@ class Comment
     {
         return $this->updated;
     }
-}
 
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     *
+     * @return Comment
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Set updated
+     *
+     * @param \DateTime $updated
+     *
+     * @return Comment
+     */
+    public function setUpdated($updated)
+    {
+        $this->updated = $updated;
+
+        return $this;
+    }
+
+    /**
+     * Set post
+     *
+     * @param \BlogBundle\Entity\Post $post
+     *
+     * @return Comment
+     */
+    public function setPost(\BlogBundle\Entity\Post $post = null)
+    {
+        $this->post = $post;
+
+        return $this;
+    }
+
+    /**
+     * Get post
+     *
+     * @return \BlogBundle\Entity\Post
+     */
+    public function getPost()
+    {
+        return $this->post;
+    }
+}

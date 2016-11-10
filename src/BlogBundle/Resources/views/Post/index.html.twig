@@ -4,10 +4,49 @@
 
 {% block content %}
 
-	<ul>
-		{% for p in posts %}
-			<li>{{ p.title }}</li>
+	<ul> 
+		{% for post in posts %}
+			<li>
+				<h2 style="color:red">{{ post.title }}</h2>
+				<label>{{ post.created|date('\\l\\e d/m/Y à H \\h i') }}</label>
+				<p style="color:red">{{ post.content }}<p>
+				<ul>
+				{% for comment in post.comments %}
+					<li>
+						<p style="color:blue">{{ comment.content }}</p>
+					</li>
+				{% endfor %}
+				</ul>
+			</li>
+			<br/>
 		{% endfor %}
 	</ul>
+
+	<br/>
+		<label> ###################################################### </label>
+	<br/>
+
+	<ul> 
+		{% for post in favorite_posts %}
+			<li>
+				<h2 style="color:red">{{ post.title }}</h2>
+				<p style="color:red">{{ post.content }}<p>
+				<ul>
+				{% for comment in post.comments %}
+					<li>
+						<p style="color:blue">{{ comment.content }}</p>
+					</li>
+				{% endfor %}
+				</ul>
+			</li>
+			<br/>
+		{% endfor %}
+	</ul>
+
+	<br/>
+		<label> ###################################################### </label>
+	<br/>
+
+	{{ dump(special_posts) }}
 
 {% endblock %}

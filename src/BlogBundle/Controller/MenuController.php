@@ -13,7 +13,8 @@ class MenuController extends Controller
         	'menu' => array(
         		array('onglet1','main'),
         		array('onglet2','page_image'),
-        		array('onglet3','posts')
+        		array('onglet3','posts'),
+                array('onglet4','create-post')
         	),
         	'menuActif' => $numMenu
         ));
